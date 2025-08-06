@@ -11,7 +11,7 @@ export default function AboutPage() {
               About <span className="text-gradient-to-r from-green-600 to-blue-600 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Gradient Wellness</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're passionate about helping individuals achieve optimal health and wellness through a comprehensive, 
+              We&apos;re passionate about helping individuals achieve optimal health and wellness through a comprehensive, 
               evidence-based approach that addresses mind, body, and spirit.
             </p>
           </div>
@@ -31,7 +31,7 @@ export default function AboutPage() {
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 What started as a small wellness practice has grown into a comprehensive wellness center serving 
-                hundreds of clients. We've helped individuals overcome chronic stress, improve their nutrition, 
+                hundreds of clients. We&apos;ve helped individuals overcome chronic stress, improve their nutrition, 
                 enhance their fitness levels, and achieve mental clarity through our integrated approach.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
@@ -68,7 +68,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission & Values</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're committed to empowering individuals to take control of their health and wellness journey.
+              We&apos;re committed to empowering individuals to take control of their health and wellness journey.
             </p>
           </div>
 

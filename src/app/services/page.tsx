@@ -66,7 +66,7 @@ export default function ServicesPage() {
       id: 'yoga-meditation',
       title: 'Yoga & Meditation',
       description: 'Mind-body practices to enhance flexibility, reduce stress, and promote inner peace.',
-      longDescription: 'Our certified yoga instructors and meditation guides help you develop mindfulness, improve flexibility, and find inner balance. Classes are suitable for all levels, from beginners to advanced practitioners.',
+      longDescription: 'Our certified yoga instructors and meditation guides help you develop mindfulness, improve flexibility, and find inner balance. Classes are suitable for all levels, from beginners to advanced practitioners. We&apos;ll help you find your center and reduce stress through proven mind-body practices.',
       features: [
         'Vinyasa and Hatha yoga classes',
         'Meditation and mindfulness training',
@@ -190,7 +190,7 @@ export default function ServicesPage() {
                     </div>
                     <p className="text-lg text-gray-600 mb-6 leading-relaxed">{service.longDescription}</p>
                     <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-3">What's Included:</h4>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-3">What&apos;s Included:</h4>
                       <ul className="space-y-2">
                         {service.features.map((feature, index) => (
                           <li key={index} className="flex items-center text-gray-600">
