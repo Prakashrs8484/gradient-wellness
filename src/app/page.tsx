@@ -4,13 +4,13 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-50 to-blue-50 py-20 lg:py-32">
+      <section className="relative bg-gradient-to-br from-black to-zinc-900 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
                 Transform Your Life with{' '}
-                <span className="text-gradient-to-r from-green-600 to-blue-600 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">
                   Holistic Wellness
                 </span>
               </h1>
@@ -21,24 +21,24 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/services"
-                  className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 text-center"
+                  className="bg-gradient-to-r from-red-600 to-red-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-red-500 transition-all duration-300 text-center"
                 >
                   Explore Services
                 </Link>
                 <Link
                   href="/contact"
-                  className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-all duration-300 text-center"
+                  className="border-2 border-red-600 text-red-500 px-8 py-4 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-all duration-300 text-center"
                 >
                   Book Consultation
                 </Link>
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-green-400 to-blue-400 rounded-2xl p-8 shadow-2xl">
+              <div className="bg-gradient-to-br from-red-600 to-red-400 rounded-2xl p-8 shadow-2xl">
                 <div className="bg-white rounded-xl p-6 shadow-lg">
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                      <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                       </svg>
                     </div>
@@ -50,14 +50,14 @@ export default function Home() {
                   <div className="space-y-3">
                     <div className="flex justify-between">
                       <span className="text-gray-600">Energy Level</span>
-                      <span className="text-green-600 font-semibold">85%</span>
+                      <span className="text-red-600 font-semibold">85%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-green-400 to-blue-400 h-2 rounded-full" style={{ width: '85%' }}></div>
+                      <div className="bg-gradient-to-r from-red-600 to-red-400 h-2 rounded-full" style={{ width: '85%' }}></div>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Stress Level</span>
-                      <span className="text-blue-600 font-semibold">Low</span>
+                      <span className="text-red-500 font-semibold">Low</span>
                     </div>
                   </div>
                 </div>
@@ -68,13 +68,13 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Gradient Wellness?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our holistic approach combines evidence-based practices with personalized care to help you achieve optimal health and wellness.
             </p>
           </div>
@@ -136,12 +136,12 @@ export default function Home() {
                 description: "Continuous guidance and support throughout your wellness transformation journey."
               }
             ].map((feature, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center text-white mb-6">
+              <div key={index} className="bg-zinc-900 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-red-400 rounded-lg flex items-center justify-center text-white mb-6">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -149,24 +149,24 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600">
+      <section className="py-20 bg-gradient-to-r from-red-700 to-red-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Ready to Start Your Wellness Journey?
           </h2>
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
             Join hundreds of clients who have transformed their lives with our comprehensive wellness programs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+              className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
             >
               Book Your Free Consultation
             </Link>
             <Link
               href="/testimonials"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
             >
               Read Success Stories
             </Link>

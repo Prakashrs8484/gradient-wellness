@@ -127,11 +127,11 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-blue-50 py-20">
+      <section className="bg-gradient-to-br from-black to-zinc-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Our <span className="text-gradient-to-r from-green-600 to-blue-600 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Services</span>
+            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">Services</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Discover our comprehensive range of wellness services designed to support your journey to optimal health and well-being.
@@ -141,23 +141,23 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
-              <div key={service.id} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center text-white mb-6">
+              <div key={service.id} className="bg-zinc-900 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-red-700 to-red-500 rounded-lg flex items-center justify-center text-white mb-6">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-sm text-gray-500">{service.duration}</span>
-                  <span className="text-lg font-semibold text-green-600">{service.price}</span>
+                  <span className="text-lg font-semibold text-red-500">{service.price}</span>
                 </div>
                 <Link
                   href={`#${service.id}`}
-                  className="text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
+                  className="text-red-500 hover:text-red-400 font-medium transition-colors duration-200"
                 >
                   Learn More →
                 </Link>
@@ -168,7 +168,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Detailed Service Descriptions */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-zinc-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Details</h2>
@@ -183,7 +183,7 @@ export default function ServicesPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <div className="flex items-center mb-6">
-                      <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center text-white mr-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-red-700 to-red-500 rounded-lg flex items-center justify-center text-white mr-4">
                         {service.icon}
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
@@ -194,7 +194,7 @@ export default function ServicesPage() {
                       <ul className="space-y-2">
                         {service.features.map((feature, index) => (
                           <li key={index} className="flex items-center text-gray-600">
-                            <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                             {feature}
@@ -209,18 +209,18 @@ export default function ServicesPage() {
                       </div>
                       <div className="bg-gray-50 rounded-lg p-4">
                         <span className="text-sm text-gray-500">Investment</span>
-                        <p className="font-semibold text-green-600">{service.price}</p>
+                        <p className="font-semibold text-red-500">{service.price}</p>
                       </div>
                     </div>
                   </div>
-                  <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-8">
+                  <div className="bg-gradient-to-br from-black to-zinc-900 rounded-xl p-8">
                     <h4 className="text-xl font-semibold text-gray-900 mb-4">Ready to Get Started?</h4>
                     <p className="text-gray-600 mb-6">
                       Book your first session and take the first step towards your wellness goals.
                     </p>
                     <Link
                       href="/contact"
-                      className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 inline-block"
+                      className="bg-gradient-to-r from-red-700 to-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-red-800 hover:to-red-600 transition-all duration-300 inline-block"
                     >
                       Book Session
                     </Link>
@@ -233,7 +233,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Packages Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Wellness Packages</h2>
@@ -286,12 +286,12 @@ export default function ServicesPage() {
             ].map((package_, index) => (
               <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{package_.name}</h3>
-                <p className="text-3xl font-bold text-green-600 mb-2">{package_.price}</p>
+                <p className="text-3xl font-bold text-red-500 mb-2">{package_.price}</p>
                 <p className="text-gray-600 mb-6">{package_.description}</p>
                 <ul className="space-y-3 mb-8">
                   {package_.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       {feature}
@@ -300,7 +300,7 @@ export default function ServicesPage() {
                 </ul>
                 <Link
                   href="/contact"
-                  className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 text-center block"
+                  className="w-full bg-gradient-to-r from-red-700 to-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-red-800 hover:to-red-600 transition-all duration-300 text-center block"
                 >
                   Choose Package
                 </Link>
@@ -311,24 +311,24 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600">
+      <section className="py-20 bg-gradient-to-r from-red-700 to-red-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Transform Your Life?
           </h2>
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
             Start your wellness journey today with our expert team and comprehensive services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+              className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
             >
               Book Your First Session
             </Link>
             <Link
               href="/testimonials"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
             >
               Read Success Stories
             </Link>

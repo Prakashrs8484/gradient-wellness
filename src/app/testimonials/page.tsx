@@ -32,11 +32,11 @@ export default function TestimonialsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-blue-50 py-20">
+      <section className="bg-gradient-to-br from-black to-zinc-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Client <span className="text-gradient-to-r from-green-600 to-blue-600 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Testimonials</span>
+            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Client <span className="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">Testimonials</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Hear from our clients about their wellness journeys and the transformations they’ve experienced with Gradient Wellness.
@@ -46,16 +46,16 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
+              <div key={idx} className="bg-zinc-900 rounded-xl p-8 shadow hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
                 <div>
-                  <p className="text-lg text-gray-700 mb-6">“{testimonial.text}”</p>
+                  <p className="text-lg text-gray-300 mb-6">“{testimonial.text}”</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-green-600">{testimonial.name}</p>
+                  <p className="font-semibold text-red-500">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">{testimonial.service}</p>
                 </div>
               </div>
@@ -65,17 +65,17 @@ export default function TestimonialsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600">
+      <section className="py-20 bg-gradient-to-r from-red-700 to-red-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Start Your Success Story?
           </h2>
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
             Join our community and experience the transformation for yourself.
           </p>
           <Link
             href="/contact"
-            className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 inline-block"
+            className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 inline-block"
           >
             Book Your Consultation
           </Link>

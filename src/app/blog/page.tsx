@@ -31,11 +31,11 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-blue-50 py-20">
+      <section className="bg-gradient-to-br from-black to-zinc-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Wellness <span className="text-gradient-to-r from-green-600 to-blue-600 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Blog & Updates</span>
+            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Wellness <span className="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">Blog & Updates</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Stay up to date with the latest wellness tips, news, and updates from the Gradient Wellness team.
@@ -45,24 +45,24 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Posts Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
+              <div key={idx} className="bg-zinc-900 rounded-xl p-8 shadow hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-green-600 transition-colors">
+                    <Link href={`/blog/${post.slug}`} className="hover:text-red-500 transition-colors">
                       {post.title}
                     </Link>
                   </h2>
                   <p className="text-gray-500 text-sm mb-4">{new Date(post.date).toLocaleDateString()}</p>
-                  <p className="text-gray-700 mb-6">{post.excerpt}</p>
+                  <p className="text-gray-300 mb-6">{post.excerpt}</p>
                 </div>
                 <div>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
+                    className="text-red-500 hover:text-red-400 font-medium transition-colors duration-200"
                   >
                     Read More →
                   </Link>
@@ -74,17 +74,17 @@ export default function BlogPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600">
+      <section className="py-20 bg-gradient-to-r from-red-700 to-red-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Want More Wellness Tips?
           </h2>
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
             Contact us or book a consultation to get personalized advice from our expert team.
           </p>
           <Link
             href="/contact"
-            className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 inline-block"
+            className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 inline-block"
           >
             Book Consultation
           </Link>
