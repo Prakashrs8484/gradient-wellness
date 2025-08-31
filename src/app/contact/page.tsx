@@ -11,7 +11,7 @@ export default function ContactPage() {
               Contact <span className="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">Gradient Wellness</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We'd love to hear from you! Reach out to book a consultation, ask a question, or learn more about our services.
+              We&apos;d love to hear from you! Reach out to book a consultation, ask a question, or learn more about our services.
             </p>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function ContactPage() {
       <section className="py-20 bg-gradient-to-r from-red-700 to-red-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            We’re Here to Help
+            We&apos;re Here to Help
           </h2>
           <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
             Reach out today and take the first step towards a healthier, happier you.

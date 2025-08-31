@@ -39,7 +39,7 @@ export default function TestimonialsPage() {
               Client <span className="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">Testimonials</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear from our clients about their wellness journeys and the transformations they've experienced with Gradient Wellness.
+              Hear from our clients about their wellness journeys and the transformations they&apos;ve experienced with Gradient Wellness.
             </p>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function TestimonialsPage() {
             {testimonials.map((testimonial, idx) => (
               <div key={idx} className="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
                 <div>
-                  <p className="text-lg text-gray-700 mb-6">"{testimonial.text}"</p>
+                  <p className="text-lg text-gray-700 mb-6">&quot;{testimonial.text}&quot;</p>
                 </div>
                 <div>
                   <p className="font-semibold text-red-500">{testimonial.name}</p>
