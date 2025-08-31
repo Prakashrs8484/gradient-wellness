@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0b0b; /* near-black */
-  --foreground: #f3f3f3; /* light text */
+  --background: #ffffff; /* white background */
+  --foreground: #171717; /* dark text */
   --accent: #dc2626;     /* red-600 */
   --accent-700: #b91c1c; /* red-700 */
   --accent-500: #ef4444; /* red-500 */
@@ -18,8 +18,8 @@
 /* Keep same colors for dark mode to enforce brand */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0b0b0b;
-    --foreground: #f3f3f3;
+    --background: #ffffff; /* keep white even in dark mode */
+    --foreground: #171717;
   }
 }
 

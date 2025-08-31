@@ -32,27 +32,27 @@ export default function TestimonialsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-black to-zinc-900 py-20">
+      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Client <span className="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">Testimonials</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear from our clients about their wellness journeys and the transformations they’ve experienced with Gradient Wellness.
+              Hear from our clients about their wellness journeys and the transformations they've experienced with Gradient Wellness.
             </p>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, idx) => (
-              <div key={idx} className="bg-zinc-900 rounded-xl p-8 shadow hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
+              <div key={idx} className="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
                 <div>
-                  <p className="text-lg text-gray-300 mb-6">“{testimonial.text}”</p>
+                  <p className="text-lg text-gray-700 mb-6">"{testimonial.text}"</p>
                 </div>
                 <div>
                   <p className="font-semibold text-red-500">{testimonial.name}</p>

@@ -4,10 +4,10 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-black to-zinc-900 py-20">
+      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               About <span className="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">Gradient Wellness</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -19,22 +19,22 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Founded in 2020, Gradient Wellness emerged from a simple yet powerful belief: that true wellness 
                 requires a holistic approach. Our founder, Dr. Sarah Johnson, recognized that traditional healthcare 
                 often treated symptoms rather than addressing the root causes of health issues.
               </p>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 What started as a small wellness practice has grown into a comprehensive wellness center serving 
                 hundreds of clients. We&apos;ve helped individuals overcome chronic stress, improve their nutrition, 
                 enhance their fitness levels, and achieve mental clarity through our integrated approach.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 Today, our team of certified professionals continues to uphold our founding principles while 
                 staying current with the latest research and wellness practices.
               </p>

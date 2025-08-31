@@ -4,26 +4,26 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-black to-zinc-900 py-20">
+      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Contact <span className="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">Gradient Wellness</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We’d love to hear from you! Reach out to book a consultation, ask a question, or learn more about our services.
+              We'd love to hear from you! Reach out to book a consultation, ask a question, or learn more about our services.
             </p>
           </div>
         </div>
       </section>
 
       {/* Contact Info & Map */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           {/* Contact Info */}
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
-            <div className="space-y-4 text-gray-300 mb-8">
+            <div className="space-y-4 text-gray-600 mb-8">
               <p><span className="font-semibold text-gray-900">Address:</span> 123 Wellness Street, Health City, HC 12345</p>
               <p><span className="font-semibold text-gray-900">Phone:</span> <a href="tel:+1234567890" className="text-red-500 hover:underline">(123) 456-7890</a></p>
               <p><span className="font-semibold text-gray-900">Email:</span> <a href="mailto:info@gradientwellness.com" className="text-red-500 hover:underline">info@gradientwellness.com</a></p>
@@ -66,18 +66,18 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-            <form className="space-y-6 bg-zinc-900 rounded-xl p-8 shadow-lg">
+            <form className="space-y-6 bg-gray-50 rounded-xl p-8 shadow-lg">
               <div>
-                <label htmlFor="name" className="block text-gray-300 font-medium mb-2">Name</label>
-                <input type="text" id="name" name="name" required className="w-full px-4 py-3 border border-gray-700 bg-black text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" />
+                <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Name</label>
+                <input type="text" id="name" name="name" required className="w-full px-4 py-3 border border-gray-300 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" />
               </div>
               <div>
-                <label htmlFor="email" className="block text-gray-300 font-medium mb-2">Email</label>
-                <input type="email" id="email" name="email" required className="w-full px-4 py-3 border border-gray-700 bg-black text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" />
+                <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email</label>
+                <input type="email" id="email" name="email" required className="w-full px-4 py-3 border border-gray-300 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" />
               </div>
               <div>
-                <label htmlFor="message" className="block text-gray-300 font-medium mb-2">Message</label>
-                <textarea id="message" name="message" rows={5} required className="w-full px-4 py-3 border border-gray-700 bg-black text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
+                <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message</label>
+                <textarea id="message" name="message" rows={5} required className="w-full px-4 py-3 border border-gray-300 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
               </div>
               <button type="submit" className="w-full bg-gradient-to-r from-red-700 to-red-500 text-white font-semibold py-3 rounded-lg hover:from-red-800 hover:to-red-600 transition-all duration-300">
                 Send Message

@@ -127,10 +127,10 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-black to-zinc-900 py-20">
+      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Our <span className="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">Services</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -141,16 +141,16 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
-              <div key={service.id} className="bg-zinc-900 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+              <div key={service.id} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-700 to-red-500 rounded-lg flex items-center justify-center text-white mb-6">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-600 mb-6">{service.description}</p>
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-sm text-gray-500">{service.duration}</span>
                   <span className="text-lg font-semibold text-red-500">{service.price}</span>
@@ -168,7 +168,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Detailed Service Descriptions */}
-      <section className="py-20 bg-zinc-900">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Details</h2>
@@ -213,7 +213,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-gradient-to-br from-black to-zinc-900 rounded-xl p-8">
+                  <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-8">
                     <h4 className="text-xl font-semibold text-gray-900 mb-4">Ready to Get Started?</h4>
                     <p className="text-gray-600 mb-6">
                       Book your first session and take the first step towards your wellness goals.
@@ -233,7 +233,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Packages Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Wellness Packages</h2>

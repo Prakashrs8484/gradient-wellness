@@ -31,10 +31,10 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-black to-zinc-900 py-20">
+      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Wellness <span className="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">Blog & Updates</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -45,11 +45,11 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Posts Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, idx) => (
-              <div key={idx} className="bg-zinc-900 rounded-xl p-8 shadow hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
+              <div key={idx} className="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
                     <Link href={`/blog/${post.slug}`} className="hover:text-red-500 transition-colors">
@@ -57,7 +57,7 @@ export default function BlogPage() {
                     </Link>
                   </h2>
                   <p className="text-gray-500 text-sm mb-4">{new Date(post.date).toLocaleDateString()}</p>
-                  <p className="text-gray-300 mb-6">{post.excerpt}</p>
+                  <p className="text-gray-700 mb-6">{post.excerpt}</p>
                 </div>
                 <div>
                   <Link
