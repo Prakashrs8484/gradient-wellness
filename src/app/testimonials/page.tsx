@@ -32,7 +32,7 @@ export default function TestimonialsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
+      <section className="bg-[#f7f8f7] section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -55,7 +55,7 @@ export default function TestimonialsPage() {
                   <p className="text-lg text-gray-700 mb-6">&quot;{testimonial.text}&quot;</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-red-500">{testimonial.name}</p>
+                  <p className="font-semibold text-red-600">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">{testimonial.service}</p>
                 </div>
               </div>

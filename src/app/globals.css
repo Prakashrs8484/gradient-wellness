@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff; /* white background */
-  --foreground: #171717; /* dark text */
-  --accent: #dc2626;     /* red-600 */
-  --accent-700: #b91c1c; /* red-700 */
-  --accent-500: #ef4444; /* red-500 */
+  --background: #f2f2f2; /* light background */
+  --foreground: #7f0b28; /* primary deep red */
+  --accent: #7f0b28;     /* primary */
+  --accent-700: #5c0801; /* darker primary */
+  --accent-500: #a30f36; /* lighter primary */
+  --section-background: #f7f8f7; /* section backgrounds */
 }
 
 @theme inline {
@@ -25,6 +26,176 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,0.9);
+  font-family: var(--font-nunito), Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-weight: 400;
+  transition: background-color 1.2s ease, color 1.2s ease;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant-garamond), serif;
+  color: #000000;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Utility classes for animations */
+.fade-in-up {
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button and link hover effects */
+a:hover, button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  transition: transform 1.2s ease, box-shadow 1.2s ease;
+}
+
+/* Disable hover animations/effects for specific elements */
+.no-hover:hover,
+.no-hover *:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: #7f0b28;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(127, 11, 40, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: #5c0801;
+  box-shadow: 0 0 12px rgba(127, 11, 40, 0.8);
+  transform: scale(1.05);
+}
+
+/* Secondary button */
+.btn-secondary {
+  background-color: #000000;
+  color: #f2f2f2;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn-secondary:hover {
+  background-color: #222222;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+nav {
+  background-color: #f7f8f7;
+  transition: background-color 1.2s ease, height 1.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Reduced motion support for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in-up,
+  .fade-in,
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  a:hover, button:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Embedded media animations */
+.media-fade-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.media-fade-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Spacious layout */
+.section-padding {
+  padding: 6rem 0;
+}
+
+.airy-margin {
+  margin-bottom: 2rem;
+}
+
+/* Performance optimizations */
+.fade-in-up,
+.fade-in,
+.scroll-reveal,
+.media-fade-in {
+  will-change: opacity, transform;
+}
+
+nav {
+  will-change: background-color, height;
 }

@@ -1,63 +1,79 @@
+'use client';
+
 import Link from 'next/link';
+import Image from 'next/image';
+import { useScrollReveal, useScrollRevealMultiple } from '@/hooks/useScrollReveal';
+import { useEffect } from 'react';
 
 export default function Home() {
+  const { ref: heroRef, isVisible: heroVisible } = useScrollReveal({ threshold: 0.1 });
+  const { visibleItems: featureVisible, getRef: getFeatureRef } = useScrollRevealMultiple(6, { threshold: 0.1 });
+  const { ref: ctaRef, isVisible: ctaVisible } = useScrollReveal({ threshold: 0.1 });
+
+  useEffect(() => {
+    // Add staggered animation delays to hero elements
+    const heroElements = document.querySelectorAll('.hero-element');
+    heroElements.forEach((el, index) => {
+      (el as HTMLElement).style.animationDelay = `${index * 0.2}s`;
+    });
+  }, []);
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 lg:py-32">
+      <section ref={heroRef} className="relative bg-[#f7f8f7] section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="hero-element fade-in-up text-4xl lg:text-7xl font-bold font-serif text-black mb-8 leading-tight">
                 Transform Your Life with{' '}
-                <span className="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">
+                <span className="text-red-600">
                   Holistic Wellness
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Discover a comprehensive approach to health that nurtures your mind, body, and spirit. 
+              <p className="hero-element fade-in-up text-xl font-sans text-black/80 mb-10 leading-relaxed max-w-2xl">
+                Discover a comprehensive approach to health that nurtures your mind, body, and spirit.
                 Our expert team is here to guide you on your wellness journey.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="hero-element fade-in-up flex flex-col sm:flex-row gap-6">
                 <Link
                   href="/services"
-                  className="bg-gradient-to-r from-red-600 to-red-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-red-500 transition-all duration-300 text-center"
+                  className="bg-red-600 text-white px-10 py-5 rounded-lg font-semibold hover:bg-red-700 transition-all duration-1200 text-center shadow-lg"
                 >
                   Explore Services
                 </Link>
                 <Link
                   href="/contact"
-                  className="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-all duration-300 text-center"
+                  className="bg-black text-white px-10 py-5 rounded-lg font-semibold hover:bg-red-600 transition-all duration-1200 text-center"
                 >
                   Book Consultation
                 </Link>
               </div>
             </div>
-            <div className="relative">
-              <div className="bg-gradient-to-br from-red-600 to-red-400 rounded-2xl p-8 shadow-2xl">
-                <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="hero-element fade-in-up relative">
+              <div className="bg-gradient-to-br from-red-600 to-red-500 rounded-3xl p-10 shadow-2xl">
+                <div className="bg-[#f7f8f7] rounded-2xl p-8 shadow-xl">
+                  <div className="flex items-center space-x-6 mb-6">
+                    <div className="w-16 h-16 bg-[#f7f8f7] rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">Wellness Assessment</h3>
-                      <p className="text-sm text-gray-600">Personalized health evaluation</p>
+                      <h3 className="font-semibold font-serif text-black">Wellness Assessment</h3>
+                      <p className="text-sm text-black/70">Personalized health evaluation</p>
                     </div>
                   </div>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Energy Level</span>
-                      <span className="text-red-600 font-semibold">85%</span>
+                      <span className="text-black/80">Energy Level</span>
+                      <span className="text-black font-semibold">85%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-red-600 to-red-400 h-2 rounded-full" style={{ width: '85%' }}></div>
+                    <div className="w-full bg-[#f7f8f7] rounded-full h-3">
+                      <div className="bg-gradient-to-r from-red-600 to-red-500 h-3 rounded-full" style={{ width: '85%' }}></div>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Stress Level</span>
-                      <span className="text-red-500 font-semibold">Low</span>
+                      <span className="text-black/80">Stress Level</span>
+                      <span className="text-black font-semibold">Low</span>
                     </div>
                   </div>
                 </div>
@@ -68,22 +84,22 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="section-padding bg-[#f2f2f2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-20 scroll-reveal">
+            <h2 className="text-4xl lg:text-5xl font-bold font-serif text-black mb-6">
               Why Choose Gradient Wellness?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl font-sans text-black/80 max-w-4xl mx-auto leading-relaxed">
               Our holistic approach combines evidence-based practices with personalized care to help you achieve optimal health and wellness.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {[
               {
                 icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 ),
@@ -92,7 +108,7 @@ export default function Home() {
               },
               {
                 icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 ),
@@ -101,7 +117,7 @@ export default function Home() {
               },
               {
                 icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 ),
@@ -110,7 +126,7 @@ export default function Home() {
               },
               {
                 icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 ),
@@ -119,7 +135,7 @@ export default function Home() {
               },
               {
                 icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 ),
@@ -128,7 +144,7 @@ export default function Home() {
               },
               {
                 icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 ),
@@ -136,12 +152,17 @@ export default function Home() {
                 description: "Continuous guidance and support throughout your wellness transformation journey."
               }
             ].map((feature, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-red-400 rounded-lg flex items-center justify-center text-white mb-6">
+              <div
+                key={index}
+                ref={getFeatureRef(index)}
+                className={`bg-[#f7f8f7] rounded-2xl p-10 hover:shadow-xl transition-shadow duration-1200 scroll-reveal ${featureVisible[index] ? 'visible' : ''}`}
+                style={{ transitionDelay: `${index * 0.15}s` }}
+              >
+                <div className="w-16 h-16 bg-black rounded-xl flex items-center justify-center text-[#f2f2f2] mb-8">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <h3 className="text-2xl font-semibold font-serif text-black mb-6">{feature.title}</h3>
+                <p className="font-sans text-black/80 leading-relaxed text-lg">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -149,24 +170,24 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-700 to-red-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+      <section ref={ctaRef} className="section-padding bg-gradient-to-r from-red-700 to-red-500">
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-reveal ${ctaVisible ? 'visible' : ''}`}>
+          <h2 className="text-4xl lg:text-5xl font-bold font-serif text-white mb-8">
             Ready to Start Your Wellness Journey?
           </h2>
-          <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl font-sans text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
             Join hundreds of clients who have transformed their lives with our comprehensive wellness programs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+              className="bg-white text-red-600 px-10 py-5 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-1200 shadow-lg"
             >
               Book Your Free Consultation
             </Link>
             <Link
               href="/testimonials"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
+              className="border-2 border-white text-white px-10 py-5 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-1200"
             >
               Read Success Stories
             </Link>
